@@ -1,0 +1,16 @@
+*
+!*/
+!*.yaml
+!.gitignore
+!*.md
+!atomations/**
+
+
+
+.storage
+.cloud
+custom_components
+node-red
+notebooks/
+
+secrets.yaml

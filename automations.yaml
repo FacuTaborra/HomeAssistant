@@ -1,0 +1,80 @@
+- id: '1664476918965'
+  alias: Alternar PF
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.pfonoff
+  condition: []
+  action:
+  - type: toggle
+    device_id: 8eded219e7285cb6e8d995799b5f2cc6
+    entity_id: light.lampara_facu_1
+    domain: light
+  - type: toggle
+    device_id: b669c1ae44ef93ad93eb1f30f4ac19b6
+    entity_id: light.lampara_facu_2
+    domain: light
+  mode: single
+- id: '1664477741666'
+  alias: Altenar Comedor
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.conoff
+  condition: []
+  action:
+  - type: toggle
+    device_id: 4d61ebfbf4aec09f318c7d4ab6030d21
+    entity_id: light.lampara_comedor
+    domain: light
+  mode: single
+- id: '1664477808750'
+  alias: Alterna PA
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.paonoff
+  condition: []
+  action:
+  - type: toggle
+    device_id: 492c4318820ca54bfda855ddfccfa295
+    entity_id: light.lampara_agu_1
+    domain: light
+  - type: toggle
+    device_id: c7ccaa341d5a31d8e5886e440680fbb0
+    entity_id: light.lampara_agu_2
+    domain: light
+  mode: single
+- id: '1664478747618'
+  alias: Departamento OFF
+  description: Apaga todas las luces del departamento
+  trigger:
+  - platform: state
+    entity_id:
+    - input_button.apagar_todo
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 8eded219e7285cb6e8d995799b5f2cc6
+    entity_id: light.lampara_facu_1
+    domain: light
+  - type: turn_off
+    device_id: b669c1ae44ef93ad93eb1f30f4ac19b6
+    entity_id: light.lampara_facu_2
+    domain: light
+  - type: turn_off
+    device_id: 4d61ebfbf4aec09f318c7d4ab6030d21
+    entity_id: light.lampara_comedor
+    domain: light
+  - type: turn_off
+    device_id: 492c4318820ca54bfda855ddfccfa295
+    entity_id: light.lampara_agu_1
+    domain: light
+  - type: turn_off
+    device_id: c7ccaa341d5a31d8e5886e440680fbb0
+    entity_id: light.lampara_agu_2
+    domain: light
+  mode: single
